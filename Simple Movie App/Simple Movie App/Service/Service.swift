@@ -10,7 +10,7 @@ import UIKit
 
 class Service {
     
-    private let apiKey = "d020099a83f960ab4c4379700817a609"
+    private let apiKey = ""
     private let movieId = "513434"
     
     func getMovieInfo(_ completion: @escaping (Movie) -> Void) {
