@@ -34,11 +34,19 @@ class MovieTitleCell: UITableViewCell {
         return stack
     }()
     
+    let likeLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        return label
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(movieLabel)
         addSubview(likeSymbol)
         addSubview(baseStackView)
+        baseStackView.addArrangedSubview(likeLabel)
         backgroundColor = .black
         
         configView()
@@ -60,11 +68,12 @@ class MovieTitleCell: UITableViewCell {
     private func configConstraints() {
         movieLabel.translatesAutoresizingMaskIntoConstraints = false
         likeSymbol.translatesAutoresizingMaskIntoConstraints = false
+        baseStackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             movieLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             movieLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            movieLabel.bottomAnchor.constraint(equalTo:  bottomAnchor, constant: -10)
+            movieLabel.bottomAnchor.constraint(equalTo:  bottomAnchor, constant: -30)
         ])
         
         NSLayoutConstraint.activate([
@@ -74,11 +83,19 @@ class MovieTitleCell: UITableViewCell {
             likeSymbol.heightAnchor.constraint(equalToConstant: 30),
             likeSymbol.widthAnchor.constraint(equalToConstant: 30)
         ])
+        
+        NSLayoutConstraint.activate([
+            baseStackView.topAnchor.constraint(equalTo: movieLabel.bottomAnchor, constant: 5),
+            baseStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            baseStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            baseStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            baseStackView.heightAnchor.constraint(equalToConstant: 20)
+        ])
 
     }
     
     @objc func likeAction() {
-        print("adasdasdas")
+        print("clicou")
         if like {
             imageSF = UIImage(systemName: "suit.heart.fill")
             likeSymbol.setImage(imageSF, for: .normal)
