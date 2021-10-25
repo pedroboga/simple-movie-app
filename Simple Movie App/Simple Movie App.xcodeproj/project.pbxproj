@@ -16,6 +16,9 @@
 		5AB6A83F2726BB85009B6A7A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6A83E2726BB85009B6A7A /* Service.swift */; };
 		5AB6A8422726BE52009B6A7A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6A8412726BE52009B6A7A /* ViewModel.swift */; };
 		5AB6A8462726D89B009B6A7A /* StretchyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6A8452726D89B009B6A7A /* StretchyView.swift */; };
+		5AB6A8482726F869009B6A7A /* MovieTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6A8472726F869009B6A7A /* MovieTitleCell.swift */; };
+		5AB6A84A27270C13009B6A7A /* SimilarMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6A84927270C13009B6A7A /* SimilarMovies.swift */; };
+		5AB6A84C27271548009B6A7A /* SimilarMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6A84B27271548009B6A7A /* SimilarMovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		5AB6A83E2726BB85009B6A7A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		5AB6A8412726BE52009B6A7A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		5AB6A8452726D89B009B6A7A /* StretchyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyView.swift; sourceTree = "<group>"; };
+		5AB6A8472726F869009B6A7A /* MovieTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTitleCell.swift; sourceTree = "<group>"; };
+		5AB6A84927270C13009B6A7A /* SimilarMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarMovies.swift; sourceTree = "<group>"; };
+		5AB6A84B27271548009B6A7A /* SimilarMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarMovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				5AB6A83C2726B9DE009B6A7A /* Model.swift */,
+				5AB6A84927270C13009B6A7A /* SimilarMovies.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				5AB6A8452726D89B009B6A7A /* StretchyView.swift */,
+				5AB6A8472726F869009B6A7A /* MovieTitleCell.swift */,
+				5AB6A84B27271548009B6A7A /* SimilarMovieCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -187,7 +196,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AB6A82B2726B899009B6A7A /* ViewController.swift in Sources */,
+				5AB6A8482726F869009B6A7A /* MovieTitleCell.swift in Sources */,
+				5AB6A84C27271548009B6A7A /* SimilarMovieCell.swift in Sources */,
 				5AB6A8272726B899009B6A7A /* AppDelegate.swift in Sources */,
+				5AB6A84A27270C13009B6A7A /* SimilarMovies.swift in Sources */,
 				5AB6A83F2726BB85009B6A7A /* Service.swift in Sources */,
 				5AB6A8292726B899009B6A7A /* SceneDelegate.swift in Sources */,
 				5AB6A8462726D89B009B6A7A /* StretchyView.swift in Sources */,
