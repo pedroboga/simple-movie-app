@@ -38,6 +38,7 @@ class ViewController: UIViewController {
     }
     
     private func configView() {
+        view.backgroundColor = .black
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
@@ -85,6 +86,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cellInfo = tableView.dequeueReusableCell(withIdentifier: MovieTitleCell.reuseId, for: indexPath) as? MovieTitleCell else { return UITableViewCell()}
             cellInfo.selectionStyle = .none
             cellInfo.movieLabel.text = movie?.title
+            if let count = movie?.voteCount {
+                cellInfo.likeLabel.text = "\(String(count)) likes"
+            }
             return cellInfo
         }
         guard let cellSimilar = tableView.dequeueReusableCell(withIdentifier: SimilarMovieCell.reuseId, for: indexPath) as? SimilarMovieCell else { return UITableViewCell() }
@@ -100,6 +104,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         return cellSimilar
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
